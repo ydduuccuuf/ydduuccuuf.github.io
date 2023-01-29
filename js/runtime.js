@@ -15,8 +15,8 @@ function createtime()
     1==String(l).length&&(l="0"+l);
     var g=(now-o)/1e3-86400*r-3600*s-60*l,b=Math.round(g);
     1==String(b).length&&(b="0"+b);
-    let c=`<div style="font-size">Power By <a href="https://hexo.io/zh-cn/">Hexo</a> | Theme <a href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a> |居然运行了 ${r} 天 ${s} 小时 ${l} 分 ${b} 秒<br/>
-    施工中。。。但是想摆。。。。<br/>
+    let c=`<div style="font-size">Power By <a href="https://hexo.io/zh-cn/">Hexo</a> | Theme <a href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a> |已运行了 ${r} 天 ${s} 小时 ${l} 分 ${b} 秒<br/>
+    施工中。。。但是想摆。。。。
     <div style="font-size:20px;font-weight:bold">
     <a class="social-icon" href="https://github.com/ydduuccuuf" target="_blank" title="Github"><i class="fab fa-github"></i></a>     
     <a class="social-icon" href="https://steamcommunity.com/profiles/76561199183986536/" target="_blank" title="Steam"><i class="fab fa-steam"></i></a>
