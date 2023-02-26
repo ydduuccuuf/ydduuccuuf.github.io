@@ -130,6 +130,59 @@
 #nav *::after{
   background-color: transparent!important;
 }
+/*二级菜单横向*/
+.menus_item_child li:not(#sidebar-menus li){
+  float: left;
+  border-radius: 6px!important;
+  -webkit-border-radius: 6px!important;
+  -moz-border-radius: 6px!important;
+  -ms-border-radius: 6px!important;
+  -o-border-radius: 6px!important;
+}
+.menus_item_child:not(#sidebar-menus ul){
+/*
+  left:calc(-150%)!important;这是估算值，为了保持元素居中的，如果不合适可以自己调
+改为：*/
+left:50%;
+translate:-50%;
+}
 
+/* 滚动条样式 */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+
+
+/*滚动条样式*/
+::-webkit-scrollbar-track {
+  background-color: transparent;
+  border-radius: 2em;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #59ccce;
+  /*background-image: -webkit-linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.4) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(255, 255, 255, 0.4) 50%,
+    rgba(255, 255, 255, 0.4) 75%,
+    transparent 75%,
+    transparent
+  );*/
+  border-radius: 2em;
+}
+
+::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
+::-moz-selection {
+  color: #fff;
+  background-color: #59ccce;
+}
 
 
