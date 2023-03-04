@@ -163,7 +163,7 @@ translate:-50%;
 
 ::-webkit-scrollbar-thumb {
   background-color: #59ccce;
-  /*background-image: -webkit-linear-gradient(
+  /* background-image: -webkit-linear-gradient(
     45deg,
     rgba(255, 255, 255, 0.4) 25%,
     transparent 25%,
@@ -172,7 +172,7 @@ translate:-50%;
     rgba(255, 255, 255, 0.4) 75%,
     transparent 75%,
     transparent
-  );*/
+  ); */
   border-radius: 2em;
 }
 
@@ -183,6 +183,18 @@ translate:-50%;
 ::-moz-selection {
   color: #fff;
   background-color: #59ccce;
+}
+
+/*卡片自适应*/
+.aside-content{
+  max-width:300px;
+  min-width:290px;
+}
+@media screen and (max-width: 900px){
+  .card-widget:not(#card-toc){
+      display:none!important;
+  }
+  /*因为目录可以用侧边栏展开，所以不能隐藏*/
 }
 
 
