@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>opencv笔记</title>
+      <link href="/2023/04/02/opencvnote/"/>
+      <url>/2023/04/02/opencvnote/</url>
+      
+        <content type="html"><![CDATA[<p>安装cv库</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">pip</span> <span class="string">install</span> <span class="string">-i</span> <span class="string">https://pypi.tuna.tsinghua.edu.cn/simple</span> <span class="string">opencv-contrib-python</span></span><br></pre></td></tr></table></figure><p>一个简单的调用摄像头。</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">video_demo</span>():</span><br><span class="line">    cap =cv2.VideoCapture(<span class="number">0</span>)<span class="comment">##0为调用摄像头，可改为一个视频目录</span></span><br><span class="line">    <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">        ret,frame=cap.read()</span><br><span class="line">        frame=cv2.flip(frame,<span class="number">1</span>)</span><br><span class="line">        <span class="keyword">if</span> ret <span class="keyword">is</span> <span class="literal">True</span>:</span><br><span class="line">            cv2.imshow(<span class="string">&quot;frame&quot;</span>,frame)</span><br><span class="line">            c=cv2.waitKey(<span class="number">10</span>)</span><br><span class="line">            <span class="keyword">if</span> c==<span class="number">27</span>:<span class="comment">##按esc退出，强制结束进程会导致后面加入的保存的视频不可读</span></span><br><span class="line">                <span class="keyword">break</span></span><br><span class="line">    cv2.destroyAllWindows()</span><br><span class="line"></span><br><span class="line">video_demo()</span><br></pre></td></tr></table></figure><p>将视频保存至本地</p><figure class="highlight diff"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">def video_demo():</span><br><span class="line">    cap =cv2.VideoCapture(0)</span><br><span class="line"><span class="addition">+   w=cap.get(cv2.CAP_PROP_FRAME_WIDTH)</span></span><br><span class="line"><span class="addition">+   h=cap.get(cv2.CAP_PROP_FRAME_HEIGHT)</span></span><br><span class="line"><span class="addition">+   fps=cap.get(cv2.CAP_PROP_FPS)</span></span><br><span class="line"><span class="addition">+    out=cv2.VideoWriter(&quot;C:/Users/cyy/Desktop/opencv/lianxi/test.mp4&quot;,cv2.VideoWriter.fourcc(&#x27;P&#x27;,&#x27;I&#x27;,&#x27;M&#x27;,&#x27;1&#x27;),fps,(np.int(w),np.int(h)),True)##路径自己定义即可   </span></span><br><span class="line">.....</span><br><span class="line">            cv2.imshow(&quot;frame&quot;,frame)</span><br><span class="line"><span class="addition">+           out.write(frame)</span></span><br><span class="line">            c=cv2.waitKey(10)</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>vhdl</title>
       <link href="/2023/03/02/vhdl/"/>
       <url>/2023/03/02/vhdl/</url>
@@ -23,7 +36,7 @@
     
     
     <entry>
-      <title>note stm32f103c8t6(1) ----如何使电机转动起来</title>
+      <title>note stm32f103c8t6</title>
       <link href="/2023/02/25/stm32f103c8t6/"/>
       <url>/2023/02/25/stm32f103c8t6/</url>
       
