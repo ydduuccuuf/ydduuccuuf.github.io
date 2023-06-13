@@ -1,7 +1,7 @@
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 html {
   line-height: 1.15;
-  -webkit-text-size-adjust: 125%
+  -webkit-text-size-adjust: 100%
 }
 
 body {
@@ -1349,8 +1349,8 @@ canvas:not(#ribbon-canvas),
   --card-bg: #fff;
   --sidebar-bg: #f6f8fa;
   --btn-hover-color: #ff7242;
-  --btn-color: #ffe0eb;
-  --btn-bg: #ffb0bb;
+  --btn-color: #fff;
+  --btn-bg: #49b1f5;
   --text-bg-hover: rgba(73,177,245,0.7);
   --light-grey: #eee;
   --dark-grey: #cacaca;
@@ -1399,7 +1399,7 @@ input::placeholder {
   z-index: -999;
   width: 100%;
   height: 100%;
-  background: url(/img/index3.webp);
+  background: url(/img/default_cover_6.webp);
   background-attachment: local;
   background-position: center;
   background-size: cover;
@@ -1801,6 +1801,48 @@ figure.highlight pre .javascript .function {
 }
 #article-container .gist table td {
   border: none;
+}
+#article-container figure.highlight {
+  margin: 0 0 24px;
+  border-radius: 7px;
+  -webkit-box-shadow: 0 5px 10px 0 rgba(144,164,174,0.4);
+  box-shadow: 0 5px 10px 0 rgba(144,164,174,0.4);
+  -webkit-transform: translateZ(0);
+}
+#article-container figure.highlight .highlight-tools:after {
+  position: absolute;
+  left: 14px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #fc625d;
+  -webkit-box-shadow: 20px 0 #fdbc40, 40px 0 #35cd4b;
+  box-shadow: 20px 0 #fdbc40, 40px 0 #35cd4b;
+  content: ' ';
+}
+#article-container figure.highlight .highlight-tools .expand {
+  right: 0;
+}
+#article-container figure.highlight .highlight-tools .expand.closed {
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  transition: all 0.3s;
+  -webkit-transform: rotate(90deg) !important;
+  -moz-transform: rotate(90deg) !important;
+  -o-transform: rotate(90deg) !important;
+  -ms-transform: rotate(90deg) !important;
+  transform: rotate(90deg) !important;
+}
+#article-container figure.highlight .highlight-tools .expand ~ .copy-notice {
+  right: 3.45em;
+}
+#article-container figure.highlight .highlight-tools .expand ~ .copy-button {
+  right: 2.1em;
+}
+#article-container figure.highlight .highlight-tools .code-lang {
+  left: 75px;
 }
 @-moz-keyframes code-expand-key {
   0% {
@@ -3765,7 +3807,7 @@ h1.page-title + .tag-cloud-list {
   text-align: center;
 }
 #pagination .page-number.current {
-  background: #ffc0cb;
+  background: #00c4b6;
   color: var(--white);
 }
 #pagination .pagination-info {
@@ -4176,14 +4218,14 @@ h1.page-title + .tag-cloud-list {
 #rightside > div > a {
   display: block;
   margin-bottom: 5px;
-  width: 35px;
-  height: 35px;
+  width: 36px;
+  height: 36px;
   border-radius: 5px;
   background-color: var(--btn-bg);
   color: var(--btn-color);
   text-align: center;
-  font-size: 16px;
-  line-height: 35px;
+  font-size: 18px;
+  line-height: 36px;
 }
 #rightside > div > button:hover,
 #rightside > div > a:hover {
