@@ -1,7 +1,7 @@
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 html {
   line-height: 1.15;
-  -webkit-text-size-adjust: 100%
+  -webkit-text-size-adjust: 125%
 }
 
 body {
@@ -1349,8 +1349,8 @@ canvas:not(#ribbon-canvas),
   --card-bg: #fff;
   --sidebar-bg: #f6f8fa;
   --btn-hover-color: #ff7242;
-  --btn-color: #fff;
-  --btn-bg: #49b1f5;
+  --btn-color: #ffe0eb;
+  --btn-bg: #ffb0bb;
   --text-bg-hover: rgba(73,177,245,0.7);
   --light-grey: #eee;
   --dark-grey: #cacaca;
@@ -3765,7 +3765,7 @@ h1.page-title + .tag-cloud-list {
   text-align: center;
 }
 #pagination .page-number.current {
-  background: #00c4b6;
+  background: #ffc0cb;
   color: var(--white);
 }
 #pagination .pagination-info {
