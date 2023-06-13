@@ -17,7 +17,7 @@ function createtime()
     var g=(now-o)/1e3-86400*r-3600*s-60*l,b=Math.round(g);
     1==String(b).length&&(b="0"+b);
 
-    let c=`<div class="timercounter">"Power By <a href="https://hexo.io/zh-cn/">Hexo</a>&nbsp;&nbsp;&nbsp;
+    let c=`<div class="timercounter">Power By <a href="https://hexo.io/zh-cn/">Hexo</a>&nbsp;&nbsp;&nbsp;
     Theme <a href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a>&nbsp;&nbsp;&nbsp;
     本站持续施工中。。。
     <div style="float:right" >已运行了 ${r} 天 ${s} 小时 ${l} 分 ${b} 秒</div></div>
