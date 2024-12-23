@@ -17,6 +17,19 @@
     
     
     <entry>
+      <title>飞特舵机使用</title>
+      <link href="/FTServo/"/>
+      <url>/FTServo/</url>
+      
+        <content type="html"><![CDATA[<p>偷偷地之前比赛写的东西搬过来doge</p><p>舵机上位机下载：<a href="https://gitee.com/ftservo/fddebug">https://gitee.com/ftservo/fddebug</a><br>首先电脑连接舵机控制板，舵机控制板连接舵机，舵机控制板连接电源（6~9V），小稳压分一根线即可</p><img src="./../images/FTServo/image.png" alt="image" style="zoom: 33%;" /><p>每次先连一个舵机，波特率改为(波特率：SCS&#x2F;STS 系列舵机波特率是 1000000，SMS 系列是 115200)打开端口，然后点击搜索，左下角出现舵机，一定要给舵机控制板上电源，否则找不到舵机。1000000波特率太离谱了，串口收到的只有0。</p><img src="./../images/FTServo/image (1).png" alt="image (1)" style="zoom: 67%;" /><p>例如像这样，点击一个</p><img src="./../images/FTServo/image (2).png" alt="image (2)" style="zoom:50%;" /><p>点击ID，修改，保存，保证自己车上的舵机每个ID不同即可。点击波特率，改为4(对应波特率为115200)，保存。<br>最后，每个舵机进行如上相同的配置方法即可。<br>导入stm32工程中</p><p><a href="./../images/FTServo/feetech.rar">代码</a></p><p>控制舵机的函数为</p><p>![image (3)](.&#x2F;..&#x2F;images&#x2F;FTServo&#x2F;image (3).png)</p><p>第一个参数为舵机ID，第二个参数为舵机位置，后面两个为速度和加速度，基本不需要改。<br>若只实现最简单的舵机控制操作，连线实际只需两根线，主板的GND连接舵机控制板的GND,主板的USART1的TX连接舵机控制板的TX，主板RX接控制板RX即可（不要怀疑，就是TX连TX，RX接RX）。</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>YZ-AIM电机驱动记录</title>
       <link href="/yzaim/"/>
       <url>/yzaim/</url>
