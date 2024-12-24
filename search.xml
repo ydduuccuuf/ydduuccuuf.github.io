@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>MPC模型预测控制</title>
+      <link href="/mpc/"/>
+      <url>/mpc/</url>
+      
+        <content type="html"><![CDATA[<p>作为准备毕业设计中记录的一个小小的笔记，学习的视频链接<a href="https://www.bilibili.com/video/BV1cL411n7KV/?spm_id_from=333.337.search-card.all.click&vd_source=f2c9b0ff37b57e06f19aca3a7a022d4b">https://www.bilibili.com/video/BV1cL411n7KV/?spm_id_from=333.337.search-card.all.click&amp;vd_source=f2c9b0ff37b57e06f19aca3a7a022d4b</a> </p><p>最优控制的研究动机：在约束条件下达到最优的系统表现。约束条件例如一辆车在转向时轮胎可以转向的最大半径。最优是一个综合的结果，并不是越快越好，例如下面两条轨迹，轨迹1相较轨迹2比较舒适。遇到紧急避障，轨迹2更好。</p><p><img src="/./../images/mpc/1735038768859.png" alt="1735038768859"></p><p>类比为单入单出系统（SISO），引入误差函数，加入平方是为了排除出现正负误差抵消对结果的影响。</p><p><img src="/./../images/mpc/image-20241224192005535.png" alt="image-20241224192005535"></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>2024年末的一点回忆</title>
       <link href="/2024final/"/>
       <url>/2024final/</url>
