@@ -1,0 +1,45 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><meta name="author"><title>一点与stm32的笔记（1）-Keil · FlowPowerStation</title><meta name="description" content="原来写得太无知了，实在看不下去,在学校单机机课程了解了些，就总结下吧
+一些有用的小东西把一些遇到的问题留在这里
+C99 Mode这个模式可以不用将变量定义到头部，移植的代码如果报一堆错误往往是这个导致的位置： Target for Option -&amp;gt;C/C++ -&amp;gt; C99 Mode
+D"><meta name="og:description" content="原来写得太无知了，实在看不下去,在学校单机机课程了解了些，就总结下吧
+一些有用的小东西把一些遇到的问题留在这里
+C99 Mode这个模式可以不用将变量定义到头部，移植的代码如果报一堆错误往往是这个导致的位置： Target for Option -&amp;gt;C/C++ -&amp;gt; C99 Mode
+D"><meta name="twitter:site" content="FlowPowerStation"><meta name="twitter:title" content="一点与stm32的笔记（1）-Keil"><meta name="twitter:card" content="summary"><meta name="keywords" content=""><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="renderer" content="webkit"><link rel="short icon" href="images/favicon.png" type="image/x-icon"><link rel="stylesheet" href="/css/bootstrap.min.css"><link rel="stylesheet" href="/css/font-awesome.min.css"><link rel="stylesheet" href="/css/style.css"><link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml"><script type="text/x-mathjax-config">MathJax.Hub.Config({
+extensions: ["tex2jax.js"],
+jax: ["input/TeX", "output/HTML-CSS"],
+tex2jax: {
+    inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+    displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+    processEscapes: true
+},
+    "HTML-CSS": { fonts: ["TeX"] }
+  });</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({
+extensions: ["tex2jax.js"],
+jax: ["input/TeX", "output/HTML-CSS"],
+tex2jax: {
+    inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+    displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+    processEscapes: true
+},
+    "HTML-CSS": { fonts: ["TeX"] }
+  });</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script><meta name="generator" content="Hexo 5.4.2"></head><body><div class="container" id="stage"><div class="row"><div class="col-sm-3 col-xs-12 side-container invisible" id="side-bar"><div class="vertical-text site-title"><h3 class="site-title-small" tabindex="-1"><a class="a-title" href="/"></a></h3><h1 class="site-title-large" tabindex="-1"><a class="a-title" href="/">cyy的垃圾堆</a></h1><!--h6(onclick="triggerSiteNav()") Trigger--></div><br class="visible-lg visible-md visible-sm"><div class="site-title-links" id="site-nav"><ul><li><a href="/">首页</a></li><li><a href="/archives">归档</a></li><li><a href="/tags">标签</a></li><li><a href="/about/index.html">关于CYY</a></li><li><a href="/link/index.html">友链</a></li><li class="soc"></li></ul><div class="visible-lg visible-md visible-sm site-nav-footer"><br class="site-nav-footer-br"><footer><p>&copy;&nbsp;2025&nbsp;<a target="_blank" href="http://example.com" rel="noopener noreferrer">CYY</a></p><p>Theme&nbsp;<a target="_blank" href="https://github.com/SumiMakito/hexo-theme-typography" rel="noopener noreferrer">Typography</a>&nbsp;by&nbsp;<a target="_blank" href="https://www.keep.moe" rel="noopener noreferrer">Makito</a></p><p>Proudly published with&nbsp;<a target="_blank" href="https://hexo.io" rel="noopener noreferrer">Hexo</a></p></footer></div></div></div><div class="col-sm-9 col-xs-12 main-container invisible" id="main-container"><div class="autopagerize_page_element"><div class="content"><div class="post-page"><div class="post-container"><p class="post-title"><a>一点与stm32的笔记（1）-Keil</a></p><p class="post-meta"><span class="date meta-item">发布于&nbsp;2023-02-25</span><span class="meta-item"><i class="fa fa-tag"></i><span>&nbsp;</span><a class="a-tag" href="/tags/嵌入式/" title="嵌入式">嵌入式</a><span>&nbsp;</span></span></p><p class="post-abstract"><p>原来写得太无知了，实在看不下去,在学校单机机课程了解了些，就总结下吧</p>
+<h4 id="一些有用的小东西"><a href="#一些有用的小东西" class="headerlink" title="一些有用的小东西"></a>一些有用的小东西</h4><p>把一些遇到的问题留在这里</p>
+<h5 id="C99-Mode"><a href="#C99-Mode" class="headerlink" title="C99 Mode"></a>C99 Mode</h5><p>这个模式可以不用将变量定义到头部，移植的代码如果报一堆错误往往是这个导致的<br>位置： Target for Option -&gt;C/C++ -&gt; C99 Mode</p>
+<h5 id="Debug"><a href="#Debug" class="headerlink" title="Debug"></a>Debug</h5><p>这需要单片机插上jlink使用，点击进入，右键变量，加入Watcher，即可看见其在程序中发生的变化</p>
+<h5 id="JLINK"><a href="#JLINK" class="headerlink" title="JLINK"></a>JLINK</h5><p>实际也是个103，后续在电脑上烧录个固件也能成个jlink</p>
+<h5 id="头文件不存在"><a href="#头文件不存在" class="headerlink" title="头文件不存在"></a>头文件不存在</h5><p>路径要包括.h文件的位置<br>位置: Target for Option -&gt;C/C++ -&gt; Include Path</p>
+<h5 id="找不到stlink"><a href="#找不到stlink" class="headerlink" title="找不到stlink"></a>找不到stlink</h5><p>可能线没插牢，或者可能用的是jlink，要进行更换<br>位置：Target for Option -&gt;Debug   Use中换成Jlink，然后点击Setting，Port进行更换</p>
+<h5 id="使能开关"><a href="#使能开关" class="headerlink" title="使能开关"></a>使能开关</h5><p>需要时开启，不需要时关闭，能够解决许多奇奇怪怪的问题</p>
+<h5 id="函数定义跳转"><a href="#函数定义跳转" class="headerlink" title="函数定义跳转"></a>函数定义跳转</h5><p>跳转不了定义？对于一份新下载的代码，先编译，再右键Go to definition of xxxxxx，</p>
+<p>或者可能没生成编译文件，Target for Option -&gt;output，点击Create Executable</p>
+<h5 id="寻找报错"><a href="#寻找报错" class="headerlink" title="寻找报错"></a>寻找报错</h5><p>在下面输出信息右键。Find in List，方向为向上。</p>
+<p>出现以下报错，如果是从网上下的代码，rebuild一下即可消除。</p>
+<p><img src="./../images/stm32/image-20241229211651220.png" alt="image-20241229211651220"></p>
+<p>Code是代码占用的空间;</p>
+<p>RO-data是 Read Only 只读常量的大小，如const型;</p>
+<p>RW-data是（Read Write） 初始化了的可读写变量的大小;</p>
+<p>ZI-data是（Zero Initialize） 没有初始化的可读写变量的大小。ZI-data不会被算做代码里因为不会被初始化;</p>
+<p>简单的说就是在烧写的时候是FLASH中的被占用的空间为：Code + RO Data + RW Data</p>
+<p>程序运行的时候，芯片内部RAM使用的空间为： RW Data + ZI Data</p>
+<p><img src="./../images/stm32_1/image-20250216100117155.png" alt="image-20250216100117155" style="zoom:67%;"></p>
+</p></div><div class="share"><span>分享到</span>&nbsp;<span class="soc"><a class="fa fa-bookmark" href="javascript:(function(){EN_CLIP_HOST='http://www.evernote.com';try{var%20x=document.createElement('SCRIPT');x.type='text/javascript';x.src=EN_CLIP_HOST+'/public/bookmarkClipper.js?'+(new%20Date().getTime()/100000);document.getElementsByTagName('head')[0].appendChild(x);}catch(e){location.href=EN_CLIP_HOST+'/clip.action?url='+encodeURIComponent(location.href)+'&amp;title='+encodeURIComponent(document.title);}})();" ref="nofollow" target="_blank"></a></span><span class="soc"><a class="fa fa-weibo" href="javascript:void((function(s,d,e){try{}catch(e){}var f='http://service.weibo.com/share/share.php?',u=d.location.href,p=['url=',e(u),'&amp;title=',e(d.title),'&amp;appkey=2924220432'].join('');function a(){if(!window.open([f,p].join(''),'mb',['toolbar=0,status=0,resizable=1,width=620,height=450,left=',(s.width-620)/2,',top=',(s.height-450)/2].join('')))u.href=[f,p].join('');};if(/Firefox/.test(navigator.userAgent)){setTimeout(a,0)}else{a()}})(screen,document,encodeURIComponent));"></a></span><span class="soc"><a class="fa fa-twitter" target="_blank" rel="noopener" href="http://twitter.com/home?status=http://example.com/stm32_1/%20FlowPowerStation%20一点与stm32的笔记（1）-Keil"></a></span></div><div class="pagination"><p class="clearfix"><span class="pre pagbuttons"><a role="navigation" href="/vhdl/" title="vhdl"><i class="fa fa-angle-double-left"></i>&nbsp;上一篇: vhdl</a></span><span>&nbsp;</span><span class="next pagbuttons"><a role="navigation" href="/stm32_2/" title="一点与stm32的笔记（3）-外设">下一篇: 一点与stm32的笔记（3）-外设&nbsp;<i class="fa fa-angle-double-right"></i></a></span></p></div></div></div></div><div class="visible-xs site-bottom-footer"><footer><p>&copy;&nbsp;2025&nbsp;<a target="_blank" href="http://example.com" rel="noopener noreferrer">CYY</a></p><p>Theme&nbsp;<a target="_blank" href="https://github.com/SumiMakito/hexo-theme-typography" rel="noopener noreferrer">Typography</a>&nbsp;by&nbsp;<a target="_blank" href="https://www.keep.moe" rel="noopener noreferrer">Makito</a></p><p>Proudly published with&nbsp;<a target="_blank" href="https://hexo.io" rel="noopener noreferrer">Hexo</a></p></footer></div></div></div></div><script src="/js/jquery-3.1.0.min.js"></script><script src="/js/bootstrap.min.js"></script><script src="/js/jquery-migrate-1.2.1.min.js"></script><script src="/js/jquery.appear.js"></script><script src="/js/google-analytics.js"></script><script src="/js/typography.js"></script></body></html>
